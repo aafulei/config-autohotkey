@@ -1,9 +1,13 @@
 SetCapslockState AlwaysOFF
 
-RAlt::CapsLock
+LShift & RShift::CapsLock
+RShift & LShift::CapsLock
 
 ; make Windows look like macOS
 #^Q::DllCall("LockWorkStation")
+
+; empty Recycle Bin
+#^R::FileRecycleEmpty
 #C::Send {Ctrl Down}C{Ctrl Up}
 
 CapsLock::Send {Escape}
@@ -87,7 +91,6 @@ CapsLock & P::Send ^{Enter}
 
 ; Super Escape
 CapsLock & `;::Send {Escape}{Escape}{Escape}{Escape}
-
 
 #if GetKeyState("Alt", "P")
 CapsLock & J::Send !{Left}
