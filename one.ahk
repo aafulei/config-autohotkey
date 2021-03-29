@@ -5,6 +5,7 @@ RShift & LShift::CapsLock
 
 ; make Windows look like macOS
 #^Q::DllCall("LockWorkStation")
+#^Enter::Send #{Up}
 
 ; empty Recycle Bin
 #^R::FileRecycleEmpty
